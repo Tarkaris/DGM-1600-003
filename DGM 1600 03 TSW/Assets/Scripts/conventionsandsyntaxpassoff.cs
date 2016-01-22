@@ -15,9 +15,9 @@ public class conventionsandsyntaxpassoff : MonoBehaviour
 	void Update()
 	{
 
-		Debug.Log (transform.position.x)
+		Debug.Log (transform.position.y);
 
-		if (transform.position.x <= 10) 
+		if (transform.position.y <= 10f) 
 		{
 			Debug.Log ("I'm going to splatter!");
 		}
