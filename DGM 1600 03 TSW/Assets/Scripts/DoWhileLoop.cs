@@ -3,7 +3,6 @@ using System.Collections;
 
 public class DoWhileLoop : MonoBehaviour 
 
-
 {
 	void Start () 
 	{
@@ -13,12 +12,6 @@ public class DoWhileLoop : MonoBehaviour
 		{
 			print ("Level decorated.");
 			
-		}
-	while(shouldContinue == true);
-		
-
-		
- 
-			
-		}
+		}while(shouldContinue == true);
 	}
+}

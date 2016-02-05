@@ -4,15 +4,13 @@ using System.Collections;
 public class ForLoop : MonoBehaviour 
 {
 
-	// Use this for initialization
+	int numItems = 4;
+
 	void Start () 
 	{
-		bool shouldContinue = false;
-
-		do {
-			print ("is it working yet?");
-
-		} while(shouldContinue == true);
-	
+		for(int i = 0; i < numItems; i++)
+		{
+			Debug.Log ("Creating item number: " + i);
+		}
 	}
 }
