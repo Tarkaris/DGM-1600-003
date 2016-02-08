@@ -15,15 +15,15 @@ public class scopeaccessmodifiers : MonoBehaviour
 	{
 		alpha = 29;
 
-		myOtherClass = new AnotherClass ();
-		myOtherClass.FruitMachine (alpha, myOtherClass.apples);
+		myOtherClass = new AnotherClass();
+		myOtherClass.FruitMachine(alpha, myOtherClass.apples);
 	}
 
 	void Example (int pens, int crayons)
 	{
 		int answer;
 		answer = pens * crayons * alpha;
-		Debug.Log (answer);
+		Debug.Log(answer);
 	}
 	
 	// Comments as things occur
