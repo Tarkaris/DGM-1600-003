@@ -32,8 +32,7 @@ public class EnemyMovementController : MonoBehaviour
     {
         if (Time.time > nextFlipChance)
         {
-
-            if (Random.Range(0, 10) >= 5) flipFacing();
+        if (Random.Range(0, 10) >= 5) flipFacing();
         nextFlipChance = Time.time + flipTime;
         }
     }
@@ -62,7 +61,7 @@ public class EnemyMovementController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (startChargeTime >= Time.time)
+            if (startChargeTime <= Time.time)
             {
                 if (!facingRight) EnemyRB.AddForce(new Vector2(-1, 0) * enemySpeed);
                 else EnemyRB.AddForce(new Vector2(1, 0) * enemySpeed);
@@ -78,7 +77,8 @@ public class EnemyMovementController : MonoBehaviour
         {
             canFlip = true;
             charging = false;
-            enemyRB.velocity = new Vector2(0f, 0f);
+            EnemyRB.velocity = new Vector2(0f, 0f);
+            BarbarianAnimator.SetBool("isCharging", charging);
         }
     }
 
@@ -87,7 +87,7 @@ public class EnemyMovementController : MonoBehaviour
         if (!canFlip) return;
         float facingX = enemyGraphic.transform.localScale.x;
         facingX *= -1f;
-        //enemyGraphic.transform.localScale.x = new Vector3(facingX, enemyGraphic.transform.localScale.y, enemyGraphic.transform.localScale.z);
+        enemyGraphic.transform.localScale = new Vector3(facingX, enemyGraphic.transform.localScale.y, enemyGraphic.transform.localScale.z);
         facingRight = !facingRight;
     }
 }
