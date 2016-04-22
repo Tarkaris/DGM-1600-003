@@ -55,6 +55,7 @@ public class EnemyMovementController : MonoBehaviour
         canFlip = false;
         charging = true;
         startChargeTime = Time.time + chargeTime;
+        
     }
 
     void OnTriggerStay2D(Collider2D other)

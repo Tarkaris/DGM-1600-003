@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     //HUD variables
     public Slider healthSlider;
     public Image damageScreen;
+    public Text gameOverScreen;
 
     bool damaged = false;
     Color damagedColor = new Color(0f, 0f, 0f, 0.5f);
@@ -76,5 +77,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Instantiate(deathfx, transform.position, transform.rotation);
         Destroy(gameObject);
+        damageScreen.color = damagedColor;
+        
     }
 }

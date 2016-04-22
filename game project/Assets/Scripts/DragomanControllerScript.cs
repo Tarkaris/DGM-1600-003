@@ -25,7 +25,7 @@ public class DragomanControllerScript : MonoBehaviour
 
     public Transform dragonMouth;
     public GameObject fireball;
-    float fireRate = 0.8f;
+    float fireRate = 1.2f;
     float nextFire = 0f;
 
 	// Use this for initialization
