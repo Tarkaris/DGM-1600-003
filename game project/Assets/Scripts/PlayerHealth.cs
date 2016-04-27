@@ -80,4 +80,10 @@ public class PlayerHealth : MonoBehaviour
         damageScreen.color = damagedColor;
         
     }
+
+    //public void winGame()
+    //{
+        //Destroy(gameObject);
+        //theGameManager.restartTheGame();
+    //}
 }
